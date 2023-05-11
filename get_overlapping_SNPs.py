@@ -38,7 +38,7 @@ for filename in SNP_filenames:
 SNP_concat_df.columns = ['#chrom', 'chromStart', 'chromEnd', 'name', 'ref', 'altCount', 'alts',
        'shiftBases', 'freqSourceCount', 'minorAlleleFreq', 'majorAllele',
        'minorAllele', 'maxFuncImpact', 'SNP_class', 'ucscNotes', '_dataOffset',
-       '_dataLen']
+       '_dataLen', 'region_id']
 SNP_concat_df.to_csv('%s' % output_filename, sep='\t', header=True, index=False)
 
 os.system('rm -r ON_REGION_SNPs/')
