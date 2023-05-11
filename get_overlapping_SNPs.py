@@ -15,7 +15,7 @@ config = vars(args)
 input_filename = config["Input_Filename"] 
 output_filename = config["Output_Filename"]
 
-os.system('mkdir ON_REGION_SNPs')
+os.system('mkdir -p ON_REGION_SNPs')
 
 bins_df = pd.read_csv('%s' % input_filename, header=0, sep="\t")
 for i,row in bins_df.iterrows():
