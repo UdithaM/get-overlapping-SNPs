@@ -28,7 +28,7 @@ optional arguments:
   -h, --help       show this help message and exit
 ```
 
-### 4)  Use the following "sample" command to run the Python script to get control regions (without genic option).
+### 4)  Use the following "sample" command to run the Python script to get overlapping SNPs from dbSNP155.
 ```sh
  python get_overlapping_SNPs.py test.bed output.bed
 ```
