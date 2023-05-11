@@ -28,8 +28,12 @@ SNP_concat_df = pd.DataFrame()
 SNP_filenames = os.listdir('ON_REGION_SNPs/')
 
 for filename in SNP_filenames:
-    SNP_temp = pd.read_csv("ON_REGION_SNPs/%s" % filename, header=None, sep="\t")
-    SNP_concat_df = pd.concat([SNP_concat_df,SNP_temp] )
+    try:
+        SNP_temp = pd.read_csv("ON_REGION_SNPs/%s" % filename, header=None, sep="\t")
+        SNP_temp['region_id'] =	filename.split('.bed')[0]
+        SNP_concat_df = pd.concat([SNP_concat_df,SNP_temp])
+    except pd.errors.EmptyDataError:
+       	continue
     
 SNP_concat_df.columns = ['#chrom', 'chromStart', 'chromEnd', 'name', 'ref', 'altCount', 'alts',
        'shiftBases', 'freqSourceCount', 'minorAlleleFreq', 'majorAllele',
