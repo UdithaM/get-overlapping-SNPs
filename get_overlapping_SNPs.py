@@ -20,7 +20,7 @@ os.system('mkdir -p ON_REGION_SNPs')
 bins_df = pd.read_csv('%s' % input_filename, header=0, sep="\t")
 for i,row in bins_df.iterrows():
 
-    os.system('./bigBedToBed http://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155.bb -chrom=%s -start=%s -end=%s ON_REGION_SNPs/%s.bed' % (row['chr'], row['bin_start'], row['bin_end'], row['id']))
+    os.system('./bigBedToBed http://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155Common.bb -chrom=%s -start=%s -end=%s ON_REGION_SNPs/%s.bed' % (row['chr'], row['bin_start'], row['bin_end'], row['id']))
 
     
 SNP_concat_df = pd.DataFrame()
