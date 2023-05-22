@@ -1,6 +1,8 @@
 # get-overlapping-SNPs
 Given a set of regions as a BED format file, retrieve overlapping SNPs from dbSNP155.
 
+## Make sure to [read, download and give permision to Linux bigBedtoBed utility](http://hgdownload.soe.ucsc.edu/downloads.html#utilities_downloads).
+
 ## Steps to use
 
 ### 1)  Clone this Github repository to your Linux computer/Server.
